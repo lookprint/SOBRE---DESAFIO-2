@@ -23,11 +23,12 @@ body,td,th {
 	background: url(../img/bg-patrickg.jpg) no-repeat center -40px #03022E;
 	background-size: 1360px;
 	overflow-y: hidden;
-
+	overflow-x: hidden;
 }
 @media (max-width:820px) {
  .body{
   overflow-y: show !important;
+  overflow-x: show !important;
   background-size: 520px !important;
  }
   .circle {
