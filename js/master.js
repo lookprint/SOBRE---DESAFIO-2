@@ -1,10 +1,12 @@
+$(function(){
+	$("*").tipTip({ delay: 250});
+});
+
 var spot = document.getElementById('spot');
 var width = document.documentElement.clientWidth;
 var height = document.documentElement.clientHeight;
-
  
- 
-function moveSpot(e){
+function moverObagulho(e){
     var x = 0;
     var y = 0;
     if (!e) var e = window.event;
@@ -26,8 +28,7 @@ function moveSpot(e){
 }
  
 window.onload = function() {
-    window.onmousemove = moveSpot;
-
+    window.onmousemove = moverObagulho;
 }
 
 
