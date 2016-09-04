@@ -16,17 +16,24 @@ a:active {
 	text-decoration: none;
 
 }
-body,td,th {
+body {
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 	font-size: 12px;
 	margin: 0px auto;
-	background: url(../img/bg-patrickg.jpg) no-repeat center -40px #03022E;
-	background-size: 1360px;
+	background-color:#03022E;
 	overflow-y: hidden;
 	overflow-x: hidden;
 }
+#conteudo {
+	min-width: 1024px;
+	height: auto;
+	margin: 0px auto;
+	background: url(../img/bg-patrickg.jpg) no-repeat center -40px #03022E;
+	background-size: 1360px;
+}
+/*
 @media (max-width:820px) {
- .body{
+  body{
   overflow-y: show !important;
   overflow-x: show !important;
   background-size: 520px !important;
@@ -37,7 +44,14 @@ body,td,th {
 	  margin-left: 10px !important;
   }
 }
+*/
 
+@media (max-width:820px) {
+ body{
+  overflow-y: show !important;
+  overflow-x: show !important;
+ }
+}
 .circle {
 	background: url(../img/final2-nobg.png)  no-repeat center 55px ;
 	max-width: 737px;
