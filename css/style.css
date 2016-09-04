@@ -20,13 +20,14 @@ body,td,th {
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 	font-size: 12px;
 	margin: 0px auto;
-	background: url(../img/bg-patrickg.jpg) no-repeat center -40px fixed #03022E;
+	background: url(../img/bg-patrickg.jpg) no-repeat center -40px #03022E;
 	background-size: 1360px;
+	 overflow-y: hidden;
 
 }
 
 .circle {
-	background: url(../img/final2-nobg.png)  no-repeat center 55px fixed;
+	background: url(../img/final2-nobg.png)  no-repeat center 55px ;
 	max-width: 737px;
 	width: 100%;
 	height: 736px;
