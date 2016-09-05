@@ -41,8 +41,7 @@ function moverObagulho(e){
     if (navigator.userAgent.match('AppleWebKit')) {
         var style = '-webkit-gradient(radial, '+x+' '+y+', 0, '+x+' '+y+', 300, from(rgba(0,0,0,0)), to(rgba(0,0,0,0.8)), color-stop(0.8, rgba(0,0,0,0)))';
     } else {
-       var style = '-moz-radial-gradient('+x+'px '+y+'px 45deg,circle closest-side,transparent 0,transparent 300px,rgba(0, 0, 0, 0.8) 200px)';
-		
+		var style = '-moz-radial-gradient('+x+'px '+y+'px 45deg,circle closest-side,transparent 0,rgba(0, 0, 0, 0) 270px,rgba(0, 0, 0, 0.8) 320px)';
     }
     spot.style.backgroundImage = style;	
 }
