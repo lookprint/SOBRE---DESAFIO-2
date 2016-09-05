@@ -10,10 +10,14 @@ $(function(){
 
 $( ".circle" ).mouseover(function() {
 	audioElementIn.play();
+	audioElementOut.pause();
+	audioElementOut.currentTime = 0
  });
  
  $( ".circle" ).mouseout(function() {
 	audioElementOut.play();
+	audioElementIn.pause();
+	audioElementIn.currentTime = 0
  });
   
   
@@ -37,7 +41,8 @@ function moverObagulho(e){
     if (navigator.userAgent.match('AppleWebKit')) {
         var style = '-webkit-gradient(radial, '+x+' '+y+', 0, '+x+' '+y+', 300, from(rgba(0,0,0,0)), to(rgba(0,0,0,0.8)), color-stop(0.8, rgba(0,0,0,0)))';
     } else {
-        var style = '-moz-radial-gradient('+x+'px '+y+'px 45deg,circle closest-side,transparent 0,transparent 300px,rgba(0, 0, 0, 0.8) 120px)';
+       var style = '-moz-radial-gradient('+x+'px '+y+'px 45deg,circle closest-side,transparent 0,transparent 300px,rgba(0, 0, 0, 0.8) 200px)';
+		
     }
     spot.style.backgroundImage = style;	
 }
