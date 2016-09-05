@@ -3,7 +3,7 @@ var audioElementOut = document.createElement('audio');
 $(function(){
 	$("*").tipTip({ delay: 250});
 	audioElementIn.setAttribute('src', 'Swish.mp3');
-	audioElementOut.setAttribute('src', '01.wav');
+	audioElementOut.setAttribute('src', 'out.mp3');
 	
 	$.get();	
 });
@@ -37,7 +37,7 @@ function moverObagulho(e){
     if (navigator.userAgent.match('AppleWebKit')) {
         var style = '-webkit-gradient(radial, '+x+' '+y+', 0, '+x+' '+y+', 300, from(rgba(0,0,0,0)), to(rgba(0,0,0,0.8)), color-stop(0.8, rgba(0,0,0,0)))';
     } else {
-        var style = '-moz-radial-gradient('+x+'px '+y+'px 45deg,circle closest-side,transparent 0,transparent 100px,rgba(0, 0, 0, 0.8) 120px)';
+        var style = '-moz-radial-gradient('+x+'px '+y+'px 45deg,circle closest-side,transparent 0,transparent 300px,rgba(0, 0, 0, 0.8) 120px)';
     }
     spot.style.backgroundImage = style;	
 }
