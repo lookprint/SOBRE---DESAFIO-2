@@ -1,7 +1,22 @@
+var audioElementIn = document.createElement('audio');
+var audioElementOut = document.createElement('audio');
 $(function(){
 	$("*").tipTip({ delay: 250});
+	audioElementIn.setAttribute('src', 'Swish.mp3');
+	audioElementOut.setAttribute('src', '01.wav');
+	
+	$.get();	
 });
 
+$( ".circle" ).mouseover(function() {
+	audioElementIn.play();
+ });
+ 
+ $( ".circle" ).mouseout(function() {
+	audioElementOut.play();
+ });
+  
+  
 var spot = document.getElementById('spot');
 var width = document.documentElement.clientWidth;
 var height = document.documentElement.clientHeight;
@@ -30,6 +45,7 @@ function moverObagulho(e){
 window.onload = function() {
     window.onmousemove = moverObagulho;
 }
+		
 
 
 
