@@ -1,5 +1,6 @@
 var audioElementIn = document.createElement('audio');
 var audioElementOut = document.createElement('audio');
+var tamanho = 300;
 $(function(){
 	$("*").tipTip({ delay: 250});
 	audioElementIn.setAttribute('src', 'Swish.mp3');
@@ -39,9 +40,9 @@ function moverObagulho(e){
     }
    
     if (navigator.userAgent.match('AppleWebKit')) {
-        var style = '-webkit-gradient(radial, '+x+' '+y+', 0, '+x+' '+y+', 300, from(rgba(0,0,0,0)), to(rgba(0,0,0,0.8)), color-stop(0.8, rgba(0,0,0,0)))';
+        var style = '-webkit-gradient(radial, '+x+' '+y+', 0, '+x+' '+y+', '+tamanho+', from(rgba(0,0,0,0)), to(rgba(0,0,0,0.8)), color-stop(0.8, rgba(0,0,0,0)))';
     } else {
-		var style = '-moz-radial-gradient('+x+'px '+y+'px 45deg,circle closest-side,transparent 0,rgba(0, 0, 0, 0) 270px,rgba(0, 0, 0, 0.8) 320px)';
+		var style = '-moz-radial-gradient('+x+'px '+y+'px 45deg,circle closest-side,transparent 0,rgba(0, 0, 0, 0) '+(tamanho-30)+'px,rgba(0, 0, 0, 0.8) '+(tamanho+50)+'px)';
     }
     spot.style.backgroundImage = style;	
 }
@@ -49,7 +50,15 @@ function moverObagulho(e){
 window.onload = function() {
     window.onmousemove = moverObagulho;
 }
-		
 
-
-
+function callback(event){
+    var roda = (event.wheelDelta) ? event.wheelDelta : -(event.detail || event.deltaY);
+		if(roda<0 && tamanho<=300 && tamanho >=100){
+			tamanho -=20;
+		} else if(  tamanho<300 ){
+			tamanho +=20;
+		}
+		moverObagulho();
+}
+var event = 'onwheel' in document ? 'wheel' : 'onmousewheel' in document ? 'mousewheel' : 'DOMMouseScroll';
+window.addEventListener(event, callback);
